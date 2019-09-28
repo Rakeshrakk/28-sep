@@ -1,0 +1,93 @@
+Fullstack application(MERN)
+--------------------------------
+employees Portal Database Setup
+--------------------------------
+Database : infosys-portal
+Table : employees
+
+commands for database
+-----------------------
+use infosys-portal
+
+db.createCollection('employees');
+
+db.employees.insertMany([{"id":1,"first_name":"Padget","last_name":"Clell","email":"pclell0@usda.gov","gender":"Male","ip_address":"212.26.106.27"},
+{"id":2,"first_name":"Ardelis","last_name":"Bowmen","email":"abowmen1@ucsd.edu","gender":"Female","ip_address":"30.25.168.178"},
+{"id":3,"first_name":"Harlie","last_name":"Cowell","email":"hcowell2@dyndns.org","gender":"Female","ip_address":"168.218.96.126"},
+{"id":4,"first_name":"Ora","last_name":"Iannuzzelli","email":"oiannuzzelli3@liveinternet.ru","gender":"Female","ip_address":"114.18.177.39"},
+{"id":5,"first_name":"Isa","last_name":"Simmans","email":"isimmans4@pagesperso-orange.fr","gender":"Male","ip_address":"145.248.174.168"}]);
+
+------------------------------------------------------------------------
+Technologies Used
+------------------------------------------------------------------------
+React JS
+Expresss , Node
+Mongo DB
+
+Employee Portal App
+--------------------
+CREATE
+UPDATE
+DELETE
+READ
+
+URLs for App
+------------
+REACT JS -> http://127.0.0.1:3000
+Express JS -> http://127.0.0.1:8000
+Mongo DB -> http://127.0.0.1.27017
+
+----------------------------
+READ All Employees Operation
+----------------------------
+URL : /api/employees/
+HTTP Method : GET
+Express Method : app.get();
+Mongo DB : db.collection().find();
+
+----------------------------
+READ SINGLE Employees Operation
+----------------------------
+URL : /api/employees/:id
+HTTP Method : GET
+Express Method : app.get();
+Mongo DB : db.collection().find({id : id});
+
+----------------------------
+UPDATE Operation
+----------------------------
+URL : /api/employees/:id
+HTTP Method : PUT
+Express Method : app.put();
+Mongo DB : db.collection().findOneAndUpdate({id : id});
+
+----------------------------
+DELETE Operation
+----------------------------
+URL : /api/employees/:id
+HTTP Method : DELETE
+Express Method : app.delete();
+Mongo DB : db.collection().deleteOne();
+
+----------------------------
+CREATE Operation
+----------------------------
+URL : /api/employees/
+HTTP Method : POST
+Express Method : app.post();
+Mongo DB : db.collection().insertOne();
+
+Server Side Modules
+-------------------
+npm install express --save
+npm install mongodb --save
+npm install body-parser --save
+
+
+
+
+
+
+
+
+
